@@ -1,0 +1,46 @@
+
+			Day 3 Task
+			
+1. How to compare two json have the same properties without order ?	
+
+		let obj1 = {
+			name: "Person 1",
+			age: 5
+		};
+
+		let obj2 = {
+			age: 5,
+			name: "Person 1"
+		};
+
+		JSON.stringify(obj1) === JSON.stringify(obj2)	
+		
+2. Using the rest countries API	and display all country flags in th console ?
+
+		function printData() {
+		  const countries = JSON.parse(this.responseText);
+		  countries.forEach((corn) => console.log(corn.flags.png));
+		}
+
+		var request = new XMLHttpRequest();
+		request.addEventListener("load", printData);
+		request.open("GET", "https://restcountries.com/v3.1/all");
+		request.send(); 
+		
+
+
+2. Using the rest countries API	and display all countries name, region and sub region in th console ?
+
+		
+		function printData() {
+		  const countries = JSON.parse(this.responseText);
+		  countries.forEach((corn) => console.log(corn.name, corn.region, corn.subregion));
+		}
+
+		var request = new XMLHttpRequest();
+		request.addEventListener("load", printData);
+		request.open("GET", "https://restcountries.com/v3.1/all");
+		request.send(); 
+		
+		
+		
